@@ -1,3 +1,28 @@
 body {
-    background-color: antiquewhite;
+    background-color: #d4f0fd;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+h1 {
+    text-align: center;
+    font-size: 48pt;
+    color: #ffffff;
+    text-shadow: -1px 0 #13565b, 0 1px #13565b, 1px 0 #13565b, 0 -1px #13565b;
+
+}
+.button {
+    background-color: #229ea3;
+    margin: 1px;
+    min-height: 50px;
+
+}
+.button p {
+    padding: 15px;
+    color: #ffffff;
+    text-align: center;
+}
+.panel-main {
+
 }
