@@ -3,6 +3,7 @@ body {
     display: flex;
     justify-content: center;
     align-content: center;
+    font-family: sans-serif;
 }
 
 h1 {
@@ -24,5 +25,14 @@ h1 {
     text-align: center;
 }
 .panel-main {
+
+}
+a {
+    color: white;
+    text-decoration: none;
+    font-size: 25px;
+}
+.button{
+    text-align: center;
 
 }
