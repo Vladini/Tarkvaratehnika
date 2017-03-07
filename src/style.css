@@ -1,5 +1,6 @@
 html {
      background: url("../img/background.jpg") no-repeat center center fixed;
+    background-size: cover;
 }
 
 body {
@@ -26,20 +27,23 @@ body {
 }
 
 a {
+    
     color: whitesmoke;
     text-decoration: none;
     font-size: 50pt;
     text-shadow: -3px 0 #998b96, 0 3px #998b96, 3px 0 #998b96, 0 -3px #998b96;
 }
 .button {
-    margin: 0 30% 2%;
+    margin: 1% 50%;
     width: 40%;
     text-transform: capitalize;
-    background-color: white;
+    background-color: #b5f6e5;
     border-radius: 100px;
     text-align: center;
     background-repeat: no-repeat;
     padding: 50px;
+    border: solid #12f4f4;
+    
 }
 
 .active-trip{
