@@ -47,18 +47,16 @@ a {
 }
 
 .active-trip{
-    font-family: Franklin Gothic Heavy;
-    font-size: 50pt;
-    margin: 15px;
-    padding: 25px;
-    text-align: center;
-    background-color: #fbf9f7;
 }
 .panel{
-    width: 100%;
+    border: solid #9ff6e8;
     height: 100%;
-    background-color: #e3f4ed;
-    min-height: 100%;
+    background-color: white;
+    min-height: 10000px;
+}
+.panel p{
+    font-family: Roboto Black;
+    color: ;
 }
 .active_budget, .active_tickets, .active_hotel,
 
