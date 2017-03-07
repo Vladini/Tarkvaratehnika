@@ -58,13 +58,15 @@ input {
     text-align: center;
 
 }
-.submit{
-    width: 50%;
-    border: none;
-    background-color: aqua;
-    font-family: Roboto BLack;
-    color: white;
-  }
+.submit{ 
+	width: 50%; 
+	border: none; 
+	background-color:#88dfcb ; 
+	font-family: Roboto BLack; 
+	color: white; 
+	border-radius: 100px; 
+	border-radius: 100px; 
+}
 
 
 a {
