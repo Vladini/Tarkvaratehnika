@@ -72,7 +72,6 @@ a {
     color: whitesmoke;
     text-decoration: none;
     font-size: 50pt;
-    text-shadow: -3px 0 #998b96, 0 3px #998b96, 3px 0 #998b96, 0 -3px #998b96;
 }
 .button {
     margin: 1% 30%;
@@ -83,7 +82,11 @@ a {
     text-align: center;
     background-repeat: no-repeat;
     padding: 50px;
-    border: solid #12f4f4;
+    border: solid #12f4f4 2px;
+    width: 60%;
+    background-color: #88dfcb;
+    font-family: Roboto BLack;
+    color: white;
     
 }
 
