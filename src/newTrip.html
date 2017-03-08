@@ -3,17 +3,18 @@
     <head>
         <meta charset="utf-8">
         <link rel="stylesheet" href="style.css">
-        <script src="scripts/jquery-3.1.0.min.js"></script>
+       	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
     </head>
         
         
 <body><div>
-    <div class="name"><p>NAME OF THE TRIP</p></div>
+<div class="back" ng-app="">
+    <div class="name"><p>{{name}}</p></div>
 
-    <div class="new-trip-form">
+    <div class="new-trip-form" >
     
-    <form>
-        <input placeholder="Trip name">
+    <form ng-app="">
+        <input placeholder="Trip name" type="text" ng-model="name">
     <input placeholder="My budget">
         
         <input placeholder="Tickets">
@@ -22,7 +23,7 @@
     </form>
 </div>
     <div class="result"><p>Your budget is</p></div>
-</div>
+	</div></div>
           
 
     	
