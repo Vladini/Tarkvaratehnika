@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Francois+One');
+@import url('https://fonts.googleapis.com/css?family=Passion+One');
 html {
     background: url("../img/background1.jpg") no-repeat center center fixed;
     background-size: cover;
@@ -16,13 +16,13 @@ body {
 
 
 .panel-main {
-    
-    
+  
     width: 100%;
     height: 100%;
 }
+
 .panel-buttons{
-    margin-top: 90%;
+    margin-top: 75%;
     margin-bottom: 30%;
     
     
@@ -87,20 +87,22 @@ a {
     font-size: 50pt;
 }
 .button {
-    margin: 1% 30%;
+    margin: 1% 19%;
     width: 60%;
     text-transform: capitalize;
-    background-color: #ffff;
-    border-radius: 100px;
     text-align: center;
     background-repeat: no-repeat;
-    padding: 50px;
-    border: solid #12f4f4 2px;
+    padding: 50px;	
     width: 60%;
-    background-color: #88dfcb;
-    font-family: Francois One;
+    background-color: #f8bf77;
+    font-family: 'Passion One';
+	text-shadow:2px 1px 1px black;
+	
     color: white;
-	text-shadow: -1px 0 #707070, 0 1px #707070, 1px 0 #707070, 0 -1px #707070;   
+	box-shadow: 1px 3px 5px grey;
+	background: #f2836a; /* Old browsers */
+	background: -moz-linear-gradient(-45deg, #f2836a 20%, #fda839 58%, #fda839 58%, #fdfdfd 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(-45deg, #f2836a 20%,#fda839 58%,#fda839 58%,#fdfdfd 100%); /* Chrome10-25,Safari5.1-6 */
 	
 }
 .back{
