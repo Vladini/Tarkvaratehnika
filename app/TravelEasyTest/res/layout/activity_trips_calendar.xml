@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.user.traveleasy.TripsCalendar">
+
+
+    <ScrollView
+        android:layout_width="344dp"
+        android:layout_height="0dp"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="8dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Android Calendar View Example"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+
+            <CalendarView
+                android:id="@+id/simpleCalendarView"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:onClick="onClick"
+                android:selectedWeekBackgroundColor="?attr/colorButtonNormal"
+                android:weekNumberColor="@android:color/holo_blue_light"
+                android:weekSeparatorLineColor="@android:color/holo_blue_light"
+                tools:layout_editor_absoluteX="0dp"
+                tools:layout_editor_absoluteY="0dp" />
+            <!-- было бы неплохо если бы был один календарь на все поездки
+            эсли это слишком сложно то посмотри что сможешь сделать
+            и каждый календарьный день был бы нажимаемый, что бы можно было сохранить
+            поездку -->
+            <Button
+                android:id="@+id/button10"
+                android:layout_width="344dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/main_btn_bg"
+                android:onClick="saveChanges"
+                android:text="Save changes"
+                android:textColor="@android:color/background_light"
+                android:textSize="33sp"
+                android:textStyle="bold|italic"
+                tools:layout_editor_absoluteX="-9dp"
+                tools:layout_editor_absoluteY="405dp" />
+
+            <!-- я не уверена должна ли быть тут кнопка save если реально сделать что
+             сохраняеться автоматически, то убери save-->
+        </LinearLayout>
+
+    </ScrollView>
+
+
+
+</android.support.constraint.ConstraintLayout>
