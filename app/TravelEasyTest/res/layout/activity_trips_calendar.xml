@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/Background"
     tools:context="com.example.user.traveleasy.TripsCalendar">
 
 
@@ -17,13 +18,6 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
-
-            <TextView
-                android:id="@+id/textView8"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Android Calendar View Example"
-                android:textAppearance="?android:attr/textAppearanceLarge" />
 
             <CalendarView
                 android:id="@+id/simpleCalendarView"
@@ -41,16 +35,19 @@
             поездку -->
             <Button
                 android:id="@+id/button10"
-                android:layout_width="344dp"
-                android:layout_height="wrap_content"
-                android:background="@drawable/main_btn_bg"
                 android:onClick="saveChanges"
                 android:text="Save changes"
-                android:textColor="@android:color/background_light"
-                android:textSize="33sp"
-                android:textStyle="bold|italic"
-                tools:layout_editor_absoluteX="-9dp"
-                tools:layout_editor_absoluteY="405dp" />
+                android:layout_width="343dp"
+                android:layout_height="80dp"
+                android:accessibilityLiveRegion="none"
+                android:background="@android:color/darker_gray"
+                android:backgroundTint="@color/HintFontColor"
+                android:textAllCaps="true"
+                android:textColor="@android:color/white"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                tools:layout_editor_absoluteX="161dp"
+                tools:layout_editor_absoluteY="113dp"/>
 
             <!-- я не уверена должна ли быть тут кнопка save если реально сделать что
              сохраняеться автоматически, то убери save-->
