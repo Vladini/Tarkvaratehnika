@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/Background"
+    android:background="@drawable/background"
     tools:context="com.example.user.traveleasy.MainActivity">
 
 
@@ -15,15 +15,15 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="vertical"
             app:layout_marginTopPercent="1%">
 
             <ImageView
                 android:id="@+id/imageView"
                 android:layout_width="match_parent"
-                android:layout_height="271dp"
-                app:srcCompat="@drawable/main5" />
+                android:layout_height="match_parent"
+                app:srcCompat="@drawable/te" />
 
             <LinearLayout
                 android:id="@+id/linearLayout2"
@@ -31,16 +31,15 @@
                 android:layout_height="75dp"
                 android:orientation="horizontal"
                 android:weightSum="1"
-                app:layout_marginTopPercent="50%">
+                app:layout_marginTopPercent="40%">
 
 
                 <Button
                     android:id="@+id/newTripBtn"
                     android:layout_width="wrap_content"
-                    android:layout_height="80dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/button"
                     android:layout_weight="0.333"
-                    android:background="@android:color/darker_gray"
-                    android:backgroundTint="@color/HintFontColor"
                     android:onClick="addTrip"
                     android:text="new trip"
                     android:textAllCaps="true"
@@ -51,33 +50,31 @@
                     tools:layout_editor_absoluteY="113dp" />
 
                 <Button
-                    android:id="@+id/activeTripsBtn"
-                    android:layout_width="wrap_content"
-                    android:layout_height="80dp"
-                    android:layout_weight="0.333"
-                    android:background="?android:attr/colorAccent"
-                    android:backgroundTint="@color/HintFontColor"
-                    android:onClick="showActiveTrips"
-                    android:text="Active Trips"
-                    android:textColor="@android:color/background_light"
-                    android:textSize="15sp"
-                    android:textStyle="normal|bold"
-                    android:layout_marginLeft="3dp" />
-
-                <Button
                     android:id="@+id/recentTripsBtn"
                     android:layout_width="wrap_content"
-                    android:layout_height="80dp"
+                    android:layout_height="wrap_content"
                     android:layout_marginLeft="3dp"
                     android:layout_weight="0.333"
-                    android:background="@android:color/darker_gray"
-                    android:backgroundTint="@color/HintFontColor"
+                    android:background="@drawable/button"
                     android:onClick="showTrips"
                     android:text="recent trips"
                     android:textAlignment="center"
                     android:textColor="@android:color/background_light"
                     android:textSize="15sp"
                     android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/activeTripsBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="3dp"
+                    android:layout_weight="0.333"
+                    android:background="@drawable/button"
+                    android:onClick="showActiveTrips"
+                    android:text="Active Trips"
+                    android:textColor="@android:color/background_light"
+                    android:textSize="15sp"
+                    android:textStyle="normal|bold" />
 
 
             </LinearLayout>
