@@ -5,12 +5,12 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
-public class TripsCalendar extends AppCompatActivity {
+public class TripsNotes extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_trips_calendar);
+        setContentView(R.layout.activity_trips_notes);
     }
 
 
@@ -24,4 +24,3 @@ public class TripsCalendar extends AppCompatActivity {
         startActivity(intent);
     }
 }
-

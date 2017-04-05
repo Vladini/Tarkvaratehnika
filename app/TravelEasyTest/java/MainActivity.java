@@ -1,4 +1,4 @@
-package com.example.vlad.traveleasytest;
+package com.example.user.traveleasy;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -56,7 +56,12 @@ public class MainActivity extends AppCompatActivity {
 //        for (Trip trip : trips) {
 //           db.deleteTrip(trip);
 //            }
-       }
     }
+
+    public void showActiveTrips(View view) {
+        Intent intent = new Intent(this, ActiveTripsActivity.class);
+        startActivity(intent);
+    }
+}
 
 
