@@ -4,13 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/Background"
+    android:background="@drawable/background"
     tools:context="com.example.user.traveleasy.TripsCalendar">
 
 
     <ScrollView
-        android:layout_width="344dp"
-        android:layout_height="0dp"
+        android:layout_width="395dp"
+        android:layout_height="587dp"
         tools:layout_editor_absoluteX="8dp"
         tools:layout_editor_absoluteY="8dp">
 
@@ -22,7 +22,7 @@
             <CalendarView
                 android:id="@+id/simpleCalendarView"
                 android:layout_width="match_parent"
-                android:layout_height="300dp"
+                android:layout_height="match_parent"
                 android:onClick="onClick"
                 android:selectedWeekBackgroundColor="?attr/colorButtonNormal"
                 android:weekNumberColor="@android:color/holo_blue_light"
@@ -33,24 +33,6 @@
             эсли это слишком сложно то посмотри что сможешь сделать
             и каждый календарьный день был бы нажимаемый, что бы можно было сохранить
             поездку -->
-            <Button
-                android:id="@+id/button10"
-                android:onClick="saveChanges"
-                android:text="Save changes"
-                android:layout_width="343dp"
-                android:layout_height="80dp"
-                android:accessibilityLiveRegion="none"
-                android:background="@android:color/darker_gray"
-                android:backgroundTint="@color/HintFontColor"
-                android:textAllCaps="true"
-                android:textColor="@android:color/white"
-                android:textSize="15sp"
-                android:textStyle="bold"
-                tools:layout_editor_absoluteX="161dp"
-                tools:layout_editor_absoluteY="113dp"/>
-
-            <!-- я не уверена должна ли быть тут кнопка save если реально сделать что
-             сохраняеться автоматически, то убери save-->
         </LinearLayout>
 
     </ScrollView>
