@@ -69,10 +69,23 @@
         эсли это слишком сложно то посмотри что сможешь сделать
         и каждый календарьный день был бы нажимаемый, что бы можно было сохранить
         поездку -->
+
+        <Button
+            android:id="@+id/button5"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="Add Event"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/button"
+            android:textColor="@android:color/white"
+            android:textSize="15sp"
+            android:textStyle="bold"/>
+
         <CalendarView
             android:id="@+id/calendarView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
+
     </LinearLayout>
 
 
