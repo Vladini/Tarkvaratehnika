@@ -1,43 +1,56 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.percent.PercentRelativeLayout
+<android.support.constraint.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background"
-    tools:context="com.example.user.traveleasy.NewTripActivity">
+    tools:context="com.example.vlad.traveleasytest.NewTripActivity">
 
 
-    <LinearLayout
-        android:layout_width="match_parent"
+    <ScrollView
+        android:layout_width="358dp"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_margin="10dp"
         tools:layout_editor_absoluteX="8dp"
         tools:layout_editor_absoluteY="8dp">
 
-        <EditText
-            android:id="@+id/editText"
-            android:layout_width="match_parent"
-            android:layout_height="90dp"
-            android:ems="10"
-            android:hint="Trip name"
-            android:inputType="textPersonName"
-            android:textColor="@android:color/white"
-            android:textColorHighlight="@android:color/white"
-            android:textColorHint="@android:color/white"
-            android:textStyle="bold|italic" />
-
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal">
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:orientation="vertical"
+            tools:layout_editor_absoluteX="8dp"
+            tools:layout_editor_absoluteY="8dp">
+
+            <EditText
+                android:id="@+id/editText"
+                android:layout_width="match_parent"
+                android:layout_height="65dp"
+                android:ems="10"
+                android:hint="Trip name"
+                android:inputType="textPersonName"
+                android:textColor="@android:color/white"
+                android:textColorHighlight="@android:color/white"
+                android:textColorHint="@android:color/white"
+                android:textStyle="bold|italic" />
+
+            <EditText
+                android:id="@+id/editText7"
+                android:layout_width="match_parent"
+                android:layout_height="65dp"
+                android:layout_weight="1"
+                android:ems="10"
+                android:hint="Start date (dd.mm.yyyy)"
+                android:inputType="date"
+                android:textColor="@android:color/white"
+                android:textColorHint="@android:color/white"
+                android:textStyle="bold|italic" />
 
             <EditText
                 android:id="@+id/editText8"
                 android:layout_width="match_parent"
-                android:layout_height="90dp"
+                android:layout_height="65dp"
                 android:layout_weight="1"
                 android:ems="10"
                 android:hint="End date (dd.mm.yyyy)"
@@ -46,21 +59,8 @@
                 android:textColorHint="@android:color/white"
                 android:textStyle="bold|italic" />
 
-            <EditText
-                android:id="@+id/editText7"
-                android:layout_width="match_parent"
-                android:layout_height="90dp"
-                android:layout_weight="1"
-                android:ems="10"
-                android:hint="Start date (dd.mm.yyyy)"
-                android:inputType="date"
-                android:textColor="@android:color/white"
-                android:textColorHint="@android:color/white"
-                android:textStyle="bold|italic" />
-        </LinearLayout>
 
-
-        <!--            <Button
+            <!--            <Button
                 android:id="@+id/button"
                 android:layout_width="343dp"
                 android:layout_height="80dp"
@@ -79,19 +79,19 @@
                 tools:layout_editor_absoluteX="161dp"
                 tools:layout_editor_absoluteY="113dp" />-->
 
-        <EditText
-            android:id="@+id/editText4"
-            android:layout_width="match_parent"
-            android:layout_height="90dp"
-            android:ems="10"
-            android:hint="Budget"
-            android:inputType="textPersonName"
-            android:textColor="@android:color/white"
-            android:textColorHint="@android:color/white"
-            android:textStyle="bold|italic"
-            android:visibility="visible" />
+            <EditText
+                android:id="@+id/editText4"
+                android:layout_width="match_parent"
+                android:layout_height="65dp"
+                android:ems="10"
+                android:hint="Budget"
+                android:inputType="textPersonName"
+                android:textColor="@android:color/white"
+                android:textColorHint="@android:color/white"
+                android:textStyle="bold|italic"
+                android:visibility="visible" />
 
-        <!--            <Button
+            <!--            <Button
                 android:id="@+id/button2"
                 android:layout_width="343dp"
                 android:layout_height="80dp"
@@ -109,71 +109,72 @@
                 tools:layout_editor_absoluteX="161dp"
                 tools:layout_editor_absoluteY="113dp" />-->
 
-        <EditText
-            android:id="@+id/editText5"
-            android:layout_width="match_parent"
-            android:layout_height="90dp"
-            android:ems="10"
-            android:hint="Hotel price"
-            android:inputType="textPersonName"
-            android:textColor="@android:color/white"
-            android:textColorHint="@android:color/white"
-            android:textStyle="bold|italic"
-            android:visibility="visible" />
-
-        <EditText
-            android:id="@+id/editText6"
-            android:layout_width="match_parent"
-            android:layout_height="90dp"
-            android:ems="10"
-            android:hint="Tickets prices"
-            android:inputType="textPersonName"
-            android:textColor="@android:color/white"
-            android:textColorHint="@android:color/white"
-            android:textStyle="bold|italic"
-            android:visibility="visible" />
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginTop="10dp"
-            android:orientation="horizontal">
-
-            <Button
-                android:id="@+id/button8"
-                android:layout_width="wrap_content"
-                android:layout_height="80dp"
-                android:layout_weight="1"
-                android:accessibilityLiveRegion="none"
-                android:background="@drawable/button"
-                android:onClick="checkBudget"
-                android:text="Check budget"
-                android:textAllCaps="true"
+            <EditText
+                android:id="@+id/editText5"
+                android:layout_width="match_parent"
+                android:layout_height="65dp"
+                android:ems="10"
+                android:hint="Hotel price"
+                android:inputType="textPersonName"
                 android:textColor="@android:color/white"
                 android:textColorHint="@android:color/white"
-                android:textSize="15sp"
-                android:textStyle="bold"
-                android:visibility="visible"
-                tools:layout_editor_absoluteX="161dp"
-                tools:layout_editor_absoluteY="113dp" />
+                android:textStyle="bold|italic"
+                android:visibility="visible" />
 
-            <Button
-                android:id="@+id/button3"
-                android:layout_width="wrap_content"
-                android:layout_height="80dp"
-                android:layout_marginLeft="10dp"
-                android:layout_weight="1"
-                android:accessibilityLiveRegion="none"
-                android:background="@drawable/button"
-                android:onClick="saveTrip"
-                android:text="Save trip"
-                android:textAllCaps="true"
+            <EditText
+                android:id="@+id/editText6"
+                android:layout_width="match_parent"
+                android:layout_height="65dp"
+                android:ems="10"
+                android:hint="Tickets prices"
+                android:inputType="textPersonName"
                 android:textColor="@android:color/white"
-                android:textSize="15sp"
-                android:textStyle="bold" />
+                android:textColorHint="@android:color/white"
+                android:textStyle="bold|italic"
+                android:visibility="visible" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/button8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="80dp"
+                    android:layout_weight="1"
+                    android:accessibilityLiveRegion="none"
+                    android:background="@drawable/button"
+                    android:onClick="checkBudget"
+                    android:text="Check budget"
+                    android:textAllCaps="true"
+                    android:textColor="@android:color/white"
+                    android:textColorHint="@android:color/white"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:visibility="visible"
+                    tools:layout_editor_absoluteX="161dp"
+                    tools:layout_editor_absoluteY="113dp" />
+
+                <Button
+                    android:id="@+id/button3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="80dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:accessibilityLiveRegion="none"
+                    android:background="@drawable/button"
+                    android:onClick="saveTrip"
+                    android:text="Save trip"
+                    android:textAllCaps="true"
+                    android:textColor="@android:color/white"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
 
         </LinearLayout>
+    </ScrollView>
 
-    </LinearLayout>
-
-</android.support.percent.PercentRelativeLayout>
+</android.support.constraint.ConstraintLayout>
