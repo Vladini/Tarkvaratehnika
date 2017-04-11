@@ -1,4 +1,4 @@
-package com.example.vlad.traveleasytest;
+package com.example.user.traveleasy;
 
 import android.app.AlertDialog;
 import android.content.DialogInterface;

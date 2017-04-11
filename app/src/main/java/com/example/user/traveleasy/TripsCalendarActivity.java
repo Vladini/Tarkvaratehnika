@@ -1,4 +1,4 @@
-package com.example.vlad.traveleasytest;
+package com.example.user.traveleasy;
 
 import android.app.usage.UsageEvents;
 import android.support.v7.app.AppCompatActivity;
