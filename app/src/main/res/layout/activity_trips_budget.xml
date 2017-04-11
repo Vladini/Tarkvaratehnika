@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <android.support.percent.PercentRelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -22,7 +22,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="0.34"
             android:background="@drawable/button"
-            android:onClick=""
+            android:onClick="editBudget"
             android:text="Budget"
             android:textAllCaps="true"
             android:textColor="@android:color/white"

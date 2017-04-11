@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -9,7 +9,7 @@
     tools:context="com.example.user.traveleasy.TripsNotesActivity">
 
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="0.34"
         android:orientation="vertical"
@@ -17,13 +17,13 @@
         tools:layout_editor_absoluteY="8dp">
 
         <ScrollView
-            android:layout_width="368dp"
+            android:layout_width="match_parent"
             android:layout_height="500dp"
             android:layout_weight="0.34">
 
             <LinearLayout
                 android:id="@+id/notesLayout"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical" />
         </ScrollView>
@@ -38,9 +38,8 @@
 
             <Button
                 android:id="@+id/button"
-                android:layout_width="150dp"
+                android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:layout_marginLeft="109dp"
                 android:background="@drawable/button"
                 android:onClick="addNotes"
                 android:text="Add new note"
