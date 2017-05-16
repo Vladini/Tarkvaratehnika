@@ -1,22 +1,19 @@
 package com.example.user.traveleasy;
 
+import android.content.ContentValues;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteOpenHelper;
+import android.content.Context;
+import android.database.sqlite.SQLiteDatabase;
 
-        import android.content.ContentValues;
-        import android.database.Cursor;
-        import android.database.sqlite.SQLiteOpenHelper;
-        import android.content.Context;
-        import android.database.sqlite.SQLiteDatabase;
+import java.util.ArrayList;
+import java.util.List;
 
-        import java.util.ArrayList;
-        import java.util.List;
 
-/**
- * Created by Vlad on 14.03.2017.
- */
 
 public class DBHandler extends SQLiteOpenHelper {
     // Database Version
-    private static final int DATABASE_VERSION = 1;
+    private static final int DATABASE_VERSION = 3;
     // Database Name
     private static final String DATABASE_NAME = "tripsInfo";
     // Contacts table name
@@ -29,6 +26,8 @@ public class DBHandler extends SQLiteOpenHelper {
     private static final String KEY_BUDGET = "trip_budget";
     private static final String KEY_HOTEL_EXPENSES = "trip_hotel_expenses";
     private static final String KEY_TICKETS_EXPENSES = "trip_tickets_expenses";
+    private static final String KEY_NOTES = "trip_notes";
+    private static final String KEY_OTHER_EXPENSES = "trip_other_expenses";
     public DBHandler(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
     }
@@ -36,7 +35,7 @@ public class DBHandler extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase db) {
         String CREATE_CONTACTS_TABLE = "CREATE TABLE " + TABLE_TRIPS + "("
                 + KEY_ID + " INTEGER PRIMARY KEY," + KEY_NAME + " TEXT,"
-                + KEY_START_DATE + " TEXT," + KEY_END_DATE + " TEXT," + KEY_BUDGET + " NUMBER," + KEY_HOTEL_EXPENSES + " NUMBER," + KEY_TICKETS_EXPENSES + " NUMBER" + ")";
+                + KEY_START_DATE + " TEXT," + KEY_END_DATE + " TEXT," + KEY_BUDGET + " NUMBER," + KEY_HOTEL_EXPENSES + " NUMBER," + KEY_TICKETS_EXPENSES + " NUMBER," + KEY_NOTES + " TEXT," + KEY_OTHER_EXPENSES + " NUMBER" + ")";
         db.execSQL(CREATE_CONTACTS_TABLE);
     }
     @Override
@@ -56,6 +55,8 @@ public class DBHandler extends SQLiteOpenHelper {
         values.put(KEY_BUDGET, trip.getOverallBudget()); // Trip Budget
         values.put(KEY_HOTEL_EXPENSES, trip.getHotelExpenses()); // Trip Hotel Expenses
         values.put(KEY_TICKETS_EXPENSES, trip.getTicketsExpenses()); // Trip Tickets Expenses
+        values.put(KEY_NOTES, trip.getNotes()); // Trip Notes
+        values.put(KEY_OTHER_EXPENSES, trip.getOtherExpenses()); // Trip Other Expenses
 // Inserting Row
         db.insert(TABLE_TRIPS, null, values);
         db.close(); // Closing database connection
@@ -64,12 +65,12 @@ public class DBHandler extends SQLiteOpenHelper {
     public Trip getTrip(int id) {
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor cursor = db.query(TABLE_TRIPS, new String[] { KEY_ID,
-                        KEY_NAME, KEY_START_DATE, KEY_END_DATE, KEY_BUDGET, KEY_HOTEL_EXPENSES, KEY_TICKETS_EXPENSES}, KEY_ID + "=?",
+                        KEY_NAME, KEY_START_DATE, KEY_END_DATE, KEY_BUDGET, KEY_HOTEL_EXPENSES, KEY_TICKETS_EXPENSES, KEY_NOTES, KEY_OTHER_EXPENSES }, KEY_ID + "=?",
                 new String[] { String.valueOf(id) }, null, null, null, null);
         if (cursor != null)
             cursor.moveToFirst();
         Trip contact = new Trip(Integer.parseInt(cursor.getString(0)),
-                cursor.getString(1), cursor.getString(2), cursor.getString(3), Double.parseDouble(cursor.getString(4)), Double.parseDouble(cursor.getString(5)), Double.parseDouble(cursor.getString(6)));
+                cursor.getString(1), cursor.getString(2), cursor.getString(3), Double.parseDouble(cursor.getString(4)), Double.parseDouble(cursor.getString(5)), Double.parseDouble(cursor.getString(6)), cursor.getString(7), Double.parseDouble(cursor.getString(8)));
 // return trip
         return contact;
     }
@@ -91,6 +92,8 @@ public class DBHandler extends SQLiteOpenHelper {
                 trip.setOverallBudget(Double.parseDouble(cursor.getString(4)));
                 trip.setHotelExpenses(Double.parseDouble(cursor.getString(5)));
                 trip.setTicketsExpenses(Double.parseDouble(cursor.getString(6)));
+                trip.setNotes(cursor.getString(7));
+                trip.setOtherExpenses(Double.parseDouble(cursor.getString(8)));
 // Adding contact to list
                 tripList.add(trip);
             } while (cursor.moveToNext());
@@ -117,6 +120,8 @@ public class DBHandler extends SQLiteOpenHelper {
         values.put(KEY_BUDGET, trip.getOverallBudget()); // Trip Budget
         values.put(KEY_HOTEL_EXPENSES, trip.getHotelExpenses()); // Trip Hotel Expenses
         values.put(KEY_TICKETS_EXPENSES, trip.getTicketsExpenses()); // Trip Tickets Expenses
+        values.put(KEY_NOTES, trip.getNotes());
+        values.put(KEY_OTHER_EXPENSES, trip.getOtherExpenses());
 // updating row
         return db.update(TABLE_TRIPS, values, KEY_ID + " = ?",
                 new String[]{String.valueOf(trip.getId())});

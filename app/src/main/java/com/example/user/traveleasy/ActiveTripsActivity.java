@@ -4,14 +4,12 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 
@@ -73,8 +71,8 @@ public class ActiveTripsActivity extends AppCompatActivity {
         }
         if (i == 0){
             TextView tv1 = new TextView(ActiveTripsActivity.this);
-            tv1.setTextSize(18);
-            tv1.setTextColor(Color.BLACK);
+            tv1.setTextSize(25);
+            tv1.setTextColor(Color.WHITE);
             tv1.setText("You have no active trips");
             layout.addView(tv1);
         }
@@ -132,3 +130,4 @@ public class ActiveTripsActivity extends AppCompatActivity {
 //    }
 
 }
+

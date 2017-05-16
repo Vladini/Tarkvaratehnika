@@ -9,22 +9,22 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name="com.example.user.traveleasy.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".NewTripActivity" />
-        <activity android:name=".RecentTripsActivty" />
-        <activity android:name=".TripProfileActivity" />
-        <activity android:name=".RecentTripsActivity" />
-        <activity android:name=".ActiveTripsActivity" />
-        <activity android:name=".TripsCalendar" />
-        <activity android:name=".CalendarOrganizer" />
-        <activity android:name=".TripsNotes" />
-        <activity android:name=".TripsBudget"></activity>
+        <activity android:name="com.example.user.traveleasy.ActiveTripsActivity" />
+        <activity android:name="com.example.user.traveleasy.BudgetActivity" />
+        <activity android:name="com.example.user.traveleasy.EventActivity" />
+        <activity android:name="com.example.user.traveleasy.RecentTripsActivity" />
+        <activity android:name="com.example.user.traveleasy.TripProfileActivity" />
+        <activity android:name="com.example.user.traveleasy.TripsCalendarActivity" />
+        <activity android:name="com.example.user.traveleasy.TripsNotesActivity" />
+        <activity android:name="com.example.user.traveleasy.NewTripActivity" />
+        <activity android:name="com.example.user.traveleasy.EventProfileActivity"></activity>
     </application>
 
 </manifest>

@@ -1,5 +1,6 @@
 package com.example.user.traveleasy;
 
+
 /**
  * Created by Vlad on 14.03.2017.
  */
@@ -12,12 +13,13 @@ public class Trip {
     private double overallBudget;
     private double hotelExpenses;
     private double ticketsExpenses;
-
+    private String notes;
+    private double otherExpenses;
 
     public Trip()
     {
     }
-    public Trip(int id, String name, String startDate, String endDate, double overallBudget, double hotelExpenses, double ticketsExpenses)
+    public Trip(int id, String name, String startDate, String endDate, double overallBudget, double hotelExpenses, double ticketsExpenses, String notes, double otherExpenses)
     {
         this.id=id;
         this.name=name;
@@ -26,6 +28,8 @@ public class Trip {
         this.overallBudget=overallBudget;
         this.hotelExpenses=hotelExpenses;
         this.ticketsExpenses=ticketsExpenses;
+        this.notes=notes;
+        this.otherExpenses=otherExpenses;
     }
 
     @Override
@@ -38,6 +42,8 @@ public class Trip {
                 ", overallBudget=" + overallBudget +
                 ", hotelExpenses=" + hotelExpenses +
                 ", ticketsExpenses=" + ticketsExpenses +
+                ", notes=" + notes +
+                ", otherExpenses=" + otherExpenses +
                 '}';
     }
 
@@ -46,6 +52,14 @@ public class Trip {
     }
     public void setName(String name) {
         this.name = name;
+    }
+
+    public double getOtherExpenses() {
+        return otherExpenses;
+    }
+
+    public void setOtherExpenses(double otherExpenses) {
+        this.otherExpenses = otherExpenses;
     }
 
     public void setStartDate(String startDate) {
@@ -83,5 +97,13 @@ public class Trip {
     }
     public void setTicketsExpenses(double ticketsExpenses) {
         this.ticketsExpenses = ticketsExpenses;
+    }
+
+    public String getNotes() {
+        return notes;
+    }
+
+    public void setNotes(String notes) {
+        this.notes = notes;
     }
 }

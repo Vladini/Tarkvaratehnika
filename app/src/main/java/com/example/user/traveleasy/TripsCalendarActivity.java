@@ -1,24 +1,18 @@
 package com.example.user.traveleasy;
 
-import android.app.usage.UsageEvents;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.view.View;
 import android.widget.CalendarView;
-import android.widget.EditText;
 import android.widget.TextView;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
-import java.util.Locale;
 
 public class TripsCalendarActivity extends AppCompatActivity {
     public static int index;
-    public static String event;
     TextView textView;
     CalendarView calendarView;
 
@@ -31,6 +25,16 @@ public class TripsCalendarActivity extends AppCompatActivity {
         textView.setText(db.getTrip(index).getName());
         calendarView = (CalendarView) findViewById(R.id.calendar);
         calendarView.setFirstDayOfWeek(2);
+        calendarView.setOnDateChangeListener(new CalendarView.OnDateChangeListener() {
+
+            @Override
+            public void onSelectedDayChange(CalendarView view, int year, int month,
+                                            int dayOfMonth) {
+                startActivity(new Intent(TripsCalendarActivity.this,EventActivity.class));
+                EventActivity.dateString = dayOfMonth + "/" + (month+1) + "/" + year;
+
+            }
+        });
         String input = db.getTrip(index).getStartDate();
         Date date = null;
         try {
@@ -44,15 +48,9 @@ public class TripsCalendarActivity extends AppCompatActivity {
 
 
     public void showNotes(View view) {
-        Intent intent = new Intent(this, TripsNotesActivity.class);
-        startActivity(intent);
+        startActivity(new Intent(TripsCalendarActivity.this, TripsNotesActivity.class));
+        TripsNotesActivity.index = index;
     }
-
-    public void editTrip(View view) {
-        startActivity(new Intent(TripsCalendarActivity.this, TripProfileActivity.class));
-        TripProfileActivity.index = index;
-    }
-
     public void editBudget(View view) {
         startActivity(new Intent(TripsCalendarActivity.this, BudgetActivity.class));
         BudgetActivity.index = index;
@@ -60,7 +58,10 @@ public class TripsCalendarActivity extends AppCompatActivity {
 
     public void addEvent(View view) {
         startActivity(new Intent(TripsCalendarActivity.this,EventActivity.class));
-        calendarView.getDate();
-        EventActivity.date_ms = calendarView.getDate();
+    }
+
+    public void editTrip(View view) {
+        startActivity(new Intent(TripsCalendarActivity.this, TripProfileActivity.class));
+        TripProfileActivity.index = index;
     }
 }

@@ -4,9 +4,7 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -82,11 +80,6 @@ public class RecentTripsActivity extends AppCompatActivity {
                 });
                 layout.addView(tv1);
                 layout.addView(tv2);
-//                SimpleDateFormat sdf = new SimpleDateFormat("dd.MM.yyyy");
-//                Date strDate = sdf.parse(trip.getStartDate());
-//                if (new Date().after(strDate)) {
-//                    tv2.setText("FUTURE");
-//                }
             } else if(editText.getText().toString().matches("")){
                 TextView tv1 = new TextView(view.getContext());
                 TextView tv2 = new TextView(view.getContext());
@@ -136,21 +129,9 @@ public class RecentTripsActivity extends AppCompatActivity {
                 });
                 layout.addView(tv1);
                 layout.addView(tv2);
-//                String valid_until = "01.07.2018";
-//                SimpleDateFormat sdf = new SimpleDateFormat("dd.MM.yyyy");
-//                Date strDate = null;
-//                try {
-//                    strDate = sdf.parse(valid_until);
-//                } catch (ParseException e) {
-//                    e.printStackTrace();
-//                }
-//                if (new Date().after(strDate)) {
-//                    tv2.setText("FUTURE");
-//                }
+
             }
         }
-//            String log = "Id: " + trip.getId() + " ,Name: " + trip.getName() + " ,Start Date: " + trip.getStartDate() + " ,End Date: " + trip.getEndDate() + " ,Budget: " + trip.getOverallBudget() + " ,Hotel Expenses: " + trip.getHotelExpenses() + " ,Tickets Expenses: " + trip.getTicketsExpenses();
-//            Log.d("Trip: : ", log);
-        }
-    }
 
+    }
+}
