@@ -1,7 +1,7 @@
 package com.example.user.traveleasy;
 
 /**
- * Created by Vlad on 25.04.2017.
+ * Created by Anastasiaa on 25.04.2017.
  */
 
 public class Event {

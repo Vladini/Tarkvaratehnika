@@ -24,18 +24,18 @@ public class NewTripActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_new_trip);
-        editText = (EditText) findViewById(R.id.editText4);
-        editText2 = (EditText) findViewById(R.id.editText5);
-        editText3 = (EditText) findViewById(R.id.editText6);
+//        editText = (EditText) findViewById(R.id.editText4);
+//        editText2 = (EditText) findViewById(R.id.editText5);
+//        editText3 = (EditText) findViewById(R.id.editText6);
         editText4 = (EditText) findViewById(R.id.editText7);
         editText5 = (EditText) findViewById(R.id.editText8);
         editText6 = (EditText) findViewById(R.id.editText);
-        editText7 = (EditText) findViewById(R.id.editText9);
+//        editText7 = (EditText) findViewById(R.id.editText9);
         button2 = (Button) findViewById(R.id.button8);
     }
 
 
-    public void checkBudget(View view) {
+   /* public void checkBudget(View view) {
         double budgetAmount;
         double hotelPrice;
         double ticketsPrice;
@@ -83,7 +83,7 @@ public class NewTripActivity extends AppCompatActivity {
                     }
                 });
         alertDialog.show();
-    }
+    }*/
 
     public void saveTrip(View view) {
         double budgetAmount;
@@ -91,29 +91,29 @@ public class NewTripActivity extends AppCompatActivity {
         double ticketsPrice;
         double otherExpenses;
 
-        if (editText.getText().toString().matches("") || Double.parseDouble(editText.getText().toString())<0) {
-            budgetAmount = 0;
-        } else{
-            budgetAmount = Double.parseDouble(editText.getText().toString());
-        }
-
-        if (editText2.getText().toString().matches("") || Double.parseDouble(editText2.getText().toString())<0) {
-            hotelPrice = 0;
-        } else{
-            hotelPrice = Double.parseDouble(editText2.getText().toString());
-        }
-
-        if (editText3.getText().toString().matches("") || Double.parseDouble(editText3.getText().toString())<0) {
-            ticketsPrice = 0;
-        } else{
-            ticketsPrice = Double.parseDouble(editText3.getText().toString());
-        }
-
-        if (editText7.getText().toString().matches("") || Double.parseDouble(editText7.getText().toString())<0) {
-            otherExpenses = 0;
-        } else{
-            otherExpenses = Double.parseDouble(editText7.getText().toString());
-        }
+//        if (editText.getText().toString().matches("") || Double.parseDouble(editText.getText().toString())<0) {
+//            budgetAmount = 0;
+//        } else{
+//            budgetAmount = Double.parseDouble(editText.getText().toString());
+//        }
+//
+//        if (editText2.getText().toString().matches("") || Double.parseDouble(editText2.getText().toString())<0) {
+//            hotelPrice = 0;
+//        } else{
+//            hotelPrice = Double.parseDouble(editText2.getText().toString());
+//        }
+//
+//        if (editText3.getText().toString().matches("") || Double.parseDouble(editText3.getText().toString())<0) {
+//            ticketsPrice = 0;
+//        } else{
+//            ticketsPrice = Double.parseDouble(editText3.getText().toString());
+//        }
+//
+//        if (editText7.getText().toString().matches("") || Double.parseDouble(editText7.getText().toString())<0) {
+//            otherExpenses = 0;
+//        } else{
+//            otherExpenses = Double.parseDouble(editText7.getText().toString());
+//        }
 
         if (editText6.getText().toString().matches("") || editText4.getText().toString().matches("") || editText5.getText().toString().matches("")){
             AlertDialog alertDialog = new AlertDialog.Builder(NewTripActivity.this).create();
@@ -140,7 +140,7 @@ public class NewTripActivity extends AppCompatActivity {
         } else {
             DBHandler db = new DBHandler(this);
             Log.d("Insert: ", "Inserting ..");
-            db.addTrip(new Trip(1, editText6.getText().toString(), editText4.getText().toString(), editText5.getText().toString(), budgetAmount, hotelPrice, ticketsPrice, "", otherExpenses));
+//            db.addTrip(new Trip(1, editText6.getText().toString(), editText4.getText().toString(), editText5.getText().toString(), budgetAmount, hotelPrice, ticketsPrice, "", otherExpenses));
             AlertDialog alertDialog = new AlertDialog.Builder(NewTripActivity.this).create();
             alertDialog.setTitle("Saved");
             alertDialog.setMessage("Trip successfully saved!");
