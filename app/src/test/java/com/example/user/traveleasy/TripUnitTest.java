@@ -35,8 +35,6 @@ public class TripUnitTest {
         Trip trip = new Trip();
         trip.setId(1);
         trip.setName("TestTrip");
-        trip.setOverallBudget(1000);
-        trip.setTicketsExpenses(100);
         trip.setStartDate("14.03.2017");
         trip.setEndDate("19.03.2017");
 
@@ -52,8 +50,6 @@ public class TripUnitTest {
         Trip trip = new Trip();
         trip.setId(1);
         trip.setName("TestTrip");
-        trip.setOverallBudget(1000);
-        trip.setTicketsExpenses(100);
         trip.setStartDate("14.03.2017");
         trip.setEndDate("19.03.2017");
 
@@ -74,8 +70,6 @@ public class TripUnitTest {
         Trip trip = new Trip();
         trip.setId(1);
         trip.setName("TestTrip");
-        trip.setOverallBudget(1000);
-        trip.setTicketsExpenses(100);
         trip.setStartDate("14.03.2017");
         trip.setEndDate("19.03.2017");
 

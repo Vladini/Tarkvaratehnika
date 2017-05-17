@@ -16,10 +16,6 @@
         tools:layout_editor_absoluteX="8dp"
         tools:layout_editor_absoluteY="8dp">
 
-        <ScrollView
-            android:layout_width="368dp"
-            android:layout_height="500dp"
-            android:layout_weight="0.34">
 
             <LinearLayout
                 android:id="@+id/notesLayout"
@@ -37,15 +33,16 @@
                     android:textStyle="italic"
                     android:typeface="serif" />
             </LinearLayout>
-        </ScrollView>
+
 
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_width="415dp"
+            android:layout_height="587dp"
             android:layout_weight="0.34"
             android:orientation="horizontal"
             tools:layout_editor_absoluteX="8dp"
-            tools:layout_editor_absoluteY="8dp">
+            tools:layout_editor_absoluteY="8dp"
+            android:weightSum="1">
 
             <Button
                 android:id="@+id/button"
@@ -67,7 +64,8 @@
                 android:text="Save"
                 android:textColor="@android:color/white"
                 android:textSize="15sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:layout_weight="0.51" />
 
             <Button
                 android:id="@+id/button10"
@@ -78,7 +76,8 @@
                 android:text="Clear page"
                 android:textColor="@android:color/white"
                 android:textSize="15sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:layout_weight="0.51" />
 
             <!-- этой кнопкой можно добавить новую заметку через alert окно-->
         </LinearLayout>

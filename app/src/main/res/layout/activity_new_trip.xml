@@ -51,10 +51,10 @@
         tools:layout_editor_absoluteY="315dp" />
 
     <ScrollView
-        android:layout_width="398dp"
-        android:layout_height="307dp"
-        tools:layout_editor_absoluteX="-11dp"
-        tools:layout_editor_absoluteY="3dp">
+        android:layout_width="404dp"
+        android:layout_height="316dp"
+        tools:layout_editor_absoluteX="3dp"
+        tools:layout_editor_absoluteY="-1dp">
 
         <LinearLayout
             android:layout_width="match_parent"
