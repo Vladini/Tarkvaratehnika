@@ -10,9 +10,9 @@
 
 
     <RelativeLayout
-        android:layout_width="358dp"
-        android:layout_height="551dp"
-        tools:layout_editor_absoluteX="8dp"
+        android:layout_width="387dp"
+        android:layout_height="559dp"
+        tools:layout_editor_absoluteX="0dp"
         tools:layout_editor_absoluteY="8dp">
 
         <LinearLayout
@@ -22,8 +22,8 @@
 
             <ImageView
                 android:id="@+id/imageView"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 app:srcCompat="@drawable/te" />
 
             <LinearLayout

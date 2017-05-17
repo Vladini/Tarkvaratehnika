@@ -9,11 +9,52 @@
     tools:context="com.example.user.traveleasy.NewTripActivity">
 
 
-    <ScrollView
-        android:layout_width="358dp"
-        android:layout_height="wrap_content"
+    <EditText
+        android:id="@+id/editText9"
+        android:layout_width="235dp"
+        android:layout_height="8dp"
+        android:ems="10"
+        android:hint="Other expenses"
+        android:inputType="textPersonName"
+        android:textColor="@android:color/white"
+        android:textColorHint="@android:color/white"
+        android:textStyle="bold|italic"
         tools:layout_editor_absoluteX="10dp"
-        tools:layout_editor_absoluteY="5dp">
+        tools:layout_editor_absoluteY="315dp" />
+
+    <EditText
+        android:id="@+id/editText6"
+        android:layout_width="213dp"
+        android:layout_height="11dp"
+        android:ems="10"
+        android:hint="Tickets prices"
+        android:inputType="textPersonName"
+        android:textColor="@android:color/white"
+        android:textColorHint="@android:color/white"
+        android:textStyle="bold|italic"
+        android:visibility="visible"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="318dp" />
+
+    <EditText
+        android:id="@+id/editText5"
+        android:layout_width="219dp"
+        android:layout_height="3dp"
+        android:ems="10"
+        android:hint="Hotel price"
+        android:inputType="textPersonName"
+        android:textColor="@android:color/white"
+        android:textColorHint="@android:color/white"
+        android:textStyle="bold|italic"
+        android:visibility="visible"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="315dp" />
+
+    <ScrollView
+        android:layout_width="398dp"
+        android:layout_height="307dp"
+        tools:layout_editor_absoluteX="-11dp"
+        tools:layout_editor_absoluteY="3dp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -60,7 +101,42 @@
                 android:textStyle="bold|italic" />
 
 
+            <!--            <Button
+                android:id="@+id/button"
+                android:layout_width="343dp"
+                android:layout_height="80dp"
+                android:layout_marginTop="10dp"
+                android:layout_weight="0.06"
+                android:accessibilityLiveRegion="none"
+                android:background="@android:color/darker_gray"
+                android:backgroundTint="@color/HintFontColor"
+                android:onClick="insertBudget"
+                android:text="Insert budget"
+                android:textAllCaps="true"
+                android:textColor="@android:color/white"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:visibility="visible"
+                tools:layout_editor_absoluteX="161dp"
+                tools:layout_editor_absoluteY="113dp" />-->
 
+            <!--            <Button
+                android:id="@+id/button2"
+                android:layout_width="343dp"
+                android:layout_height="80dp"
+                android:accessibilityLiveRegion="none"
+                android:background="@android:color/darker_gray"
+                android:backgroundTint="@color/HintFontColor"
+                android:onClick="insertExpenses"
+                android:text="Insert expenses"
+                android:textAllCaps="true"
+                android:textColor="@android:color/white"
+                android:textColorHint="@android:color/white"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:visibility="visible"
+                tools:layout_editor_absoluteX="161dp"
+                tools:layout_editor_absoluteY="113dp" />-->
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -68,30 +144,29 @@
                 android:layout_marginTop="10dp"
                 android:orientation="horizontal">
 
-                <!--<Button-->
-                    <!--android:id="@+id/button8"-->
-                    <!--android:layout_width="wrap_content"-->
-                    <!--android:layout_height="80dp"-->
-                    <!--android:layout_weight="1"-->
-                    <!--android:accessibilityLiveRegion="none"-->
-                    <!--android:background="@drawable/button"-->
-                    <!--android:onClick="checkBudget"-->
-                    <!--android:text="Check budget"-->
-                    <!--android:textAllCaps="true"-->
-                    <!--android:textColor="@android:color/white"-->
-                    <!--android:textColorHint="@android:color/white"-->
-                    <!--android:textSize="15sp"-->
-                    <!--android:textStyle="bold"-->
-                    <!--android:visibility="visible"-->
-                    <!--tools:layout_editor_absoluteX="161dp"-->
-                    <!--tools:layout_editor_absoluteY="113dp" />-->
+                <Button
+                    android:id="@+id/button8"
+                    android:layout_width="0dp"
+                    android:layout_height="41dp"
+                    android:accessibilityLiveRegion="none"
+                    android:background="@drawable/button"
+                    android:onClick="checkBudget"
+                    android:text="Check budget"
+                    android:textAllCaps="true"
+                    android:textColor="@android:color/white"
+                    android:textColorHint="@android:color/white"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:visibility="visible"
+                    tools:layout_editor_absoluteX="161dp"
+                    tools:layout_editor_absoluteY="113dp" />
 
                 <Button
                     android:id="@+id/button3"
                     android:layout_width="wrap_content"
                     android:layout_height="80dp"
                     android:layout_marginLeft="10dp"
-                    android:layout_weight="1"
+                    android:layout_weight="1.07"
                     android:accessibilityLiveRegion="none"
                     android:background="@drawable/button"
                     android:onClick="saveTrip"
@@ -102,6 +177,18 @@
                     android:textStyle="bold" />
 
             </LinearLayout>
+
+            <EditText
+                android:id="@+id/editText4"
+                android:layout_width="157dp"
+                android:layout_height="1dp"
+                android:ems="10"
+                android:hint="Budget"
+                android:inputType="textPersonName"
+                android:textColor="@android:color/white"
+                android:textColorHint="@android:color/white"
+                android:textStyle="bold|italic"
+                android:visibility="visible" />
 
         </LinearLayout>
     </ScrollView>
