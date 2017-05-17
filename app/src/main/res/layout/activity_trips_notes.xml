@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context="com.example.user.traveleasy.TripsNotesActivity">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.34"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="8dp">
+
+
+            <LinearLayout
+                android:id="@+id/notesLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/noteText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="serif"
+                    android:textColor="@android:color/white"
+                    android:textSize="18sp"
+                    android:textStyle="italic"
+                    android:typeface="serif" />
+            </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="415dp"
+            android:layout_height="587dp"
+            android:layout_weight="0.34"
+            android:orientation="horizontal"
+            tools:layout_editor_absoluteX="8dp"
+            tools:layout_editor_absoluteY="8dp"
+            android:weightSum="1">
+
+            <Button
+                android:id="@+id/button"
+                android:layout_width="122dp"
+                android:layout_height="50dp"
+                android:background="@drawable/button"
+                android:onClick="addNotes"
+                android:text="Add new"
+                android:textColor="@android:color/white"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/button6"
+                android:layout_width="122dp"
+                android:layout_height="50dp"
+                android:background="@drawable/button"
+                android:onClick="saveNotes"
+                android:text="Save"
+                android:textColor="@android:color/white"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:layout_weight="0.51" />
+
+            <Button
+                android:id="@+id/button10"
+                android:layout_width="122dp"
+                android:layout_height="50dp"
+                android:background="@drawable/button"
+                android:onClick="deleteNotes"
+                android:text="Clear page"
+                android:textColor="@android:color/white"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:layout_weight="0.51" />
+
+            <!-- этой кнопкой можно добавить новую заметку через alert окно-->
+        </LinearLayout>
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>
